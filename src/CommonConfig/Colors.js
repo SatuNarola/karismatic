@@ -4,7 +4,10 @@ export const Colors = {
 	WHITE: '#FFFFFF',
 	BLACK: '#000000',
 	GRAY: '#7A7A7A',
+	ORANGE: '#F3A548',
 
+	// OVERLAY DARK COLORS
+	OVERLAY_DARK_30: 'rgba(0,0,0,0.3)',
 
 
 	GREEN: '#2EC82E',
@@ -23,7 +26,6 @@ export const Colors = {
 	LGRAY: '#F2F2F2',
 	BLUE: '#129A7F',
 	RED: '#f44336',
-	ORANGE: '#F3A548',
 	TRANSPARENT: 'transparent',
 	FORMBACK: 'rgb(241,243,247)',
 	SKYBLUE: 'rgb(52,201,238)',
@@ -35,10 +37,9 @@ export const Colors = {
 	YELLOW: '#FFB800',
 	MAGENTA: '#DB79FF',
 
-	// OVERLAY DARK COLORS
+
 	OVERLAY_DARK_10: 'rgba(0,0,0,0.1)',
 	OVERLAY_DARK_20: 'rgba(0,0,0,0.2)',
-	OVERLAY_DARK_30: 'rgba(0,0,0,0.3)',
 	OVERLAY_DARK_40: 'rgba(0,0,0,0.4)',
 	OVERLAY_DARK_50: 'rgba(0,0,0,0.5)',
 	OVERLAY_DARK_60: 'rgba(0,0,0,0.6)',

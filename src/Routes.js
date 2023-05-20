@@ -1,5 +1,6 @@
 // --------------- LIBRARIES ---------------
 import React from "react";
+import { Image, Pressable, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,7 +12,9 @@ import { getNetwork } from "./Redux/Actions";
 // --------------- HOME SCREENS ---------------
 import Home from "./screens/Home/Home";
 import Description from "./screens/Home/Description";
-import { Colors } from "./CommonConfig";
+import Cart from "./screens/Home/Cart";
+
+import { Colors, Images } from "./CommonConfig";
 
 
 const Stack = createNativeStackNavigator();
@@ -35,19 +38,19 @@ const Routes = () => {
 
     return (
         <NavigationContainer >
-            <Stack.Navigator initialRouteName="Home">
+            <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
                 <Stack.Screen
                     name="Home"
                     component={Home}
                     options={{
-                        title: 'Products',
-                        headerStyle: {
-                            backgroundColor: Colors.WHITE,
-                        },
-                        headerTintColor: Colors.BLACK,
-                        headerTitleStyle: {
-                            fontWeight: 'bold',
-                        },
+                        // title: 'Products',
+                        // headerStyle: {
+                        //     backgroundColor: Colors.WHITE,
+                        // },
+                        // headerTintColor: Colors.BLACK,
+                        // headerTitleStyle: {
+                        //     fontWeight: 'bold',
+                        // },
                     }}
                 />
                 <Stack.Screen
@@ -55,6 +58,12 @@ const Routes = () => {
                     component={Description}
                     options={{}}
                 />
+                <Stack.Screen
+                    name="Cart"
+                    component={Cart}
+                    options={{}}
+                />
+
             </Stack.Navigator>
         </NavigationContainer>
     )

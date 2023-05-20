@@ -9,10 +9,6 @@ import API from '../Services';
 const getProductSaga = function* getProductSaga() {
     try {
         const response = yield call(API.Home.GetProducts);
-        // console.log('RESPONCE', response);
-        // if (!response) {
-        //     throw new Error(response);
-        // }
         yield put(getProducts.Success(response));
     } catch (error) {
         console.log('ERROR IN SAGA ->', error);
