@@ -4,15 +4,15 @@ import { Tools } from '../../Helper';
 
 // --------------- INITIAL STATE ---------------
 export const INITIAL_STATE = {
-    isProductsSuccess:null,
-    successMsg:'',
-    errorMsg:'',
-    ProductsListResponse:[]
+    isProductsSuccess: null,
+    successMsg: '',
+    errorMsg: '',
+    ProductsListResponse: []
 };
 
 // --------------- REDUCER FUNCTION ---------------
 export default (state = INITIAL_STATE, action) => {
-    // console.log(action, action['payload'].entries, "action")
+    // console.log('\n\nACTIONS\n\n', action.type)
     switch (action.type) {
         // Register
         case Products.REQUEST:

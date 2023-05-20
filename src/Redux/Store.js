@@ -23,8 +23,8 @@ const reducers = persistReducer(
 const sagaMiddleware = createSagaMiddleware();
 const middlewares = [];
 if (__DEV__) {
-    middlewares.push(sagaMiddleware, logger); // With logger
-    // middlewares.push(sagaMiddleware); // without logger
+    // middlewares.push(sagaMiddleware, logger); // With logger
+    middlewares.push(sagaMiddleware); // without logger
 } else {
     middlewares.push(sagaMiddleware); // without logger
 }

@@ -8,10 +8,8 @@ export const Colors = {
 
 
 	GREEN: '#2EC82E',
-
 	CHATSENDER: '#D5B396',
 	CHATRECEIVER: '#FAEBDE',
-
 	LIGHTGRAY: '#EEEEEE',
 	THIRD: '#787878',
 	GRAY400: '#BDBDBD',
@@ -36,6 +34,8 @@ export const Colors = {
 	LIKEBLUE: 'rgb(0,166,230)',
 	YELLOW: '#FFB800',
 	MAGENTA: '#DB79FF',
+
+	// OVERLAY DARK COLORS
 	OVERLAY_DARK_10: 'rgba(0,0,0,0.1)',
 	OVERLAY_DARK_20: 'rgba(0,0,0,0.2)',
 	OVERLAY_DARK_30: 'rgba(0,0,0,0.3)',
@@ -45,10 +45,10 @@ export const Colors = {
 	OVERLAY_DARK_70: 'rgba(0,0,0,0.7)',
 	OVERLAY_DARK_90: 'rgba(0,0,0,0.9)',
 
+	// OVERLAY LIGHT COLORS
 	OVERLAY_LIGHT_80: 'rgba(255,255,255,0.7)',
 	OVERLAY_LIGHT_50: 'rgba(255,255,255,0.5)',
 	OVERLAY_LIGHT_30: 'rgba(255,255,255,0.3)',
 	OVERLAY_LIGHT_20: 'rgba(255,255,255,0.2)',
 	OVERLAY_LIGHT_10: 'rgba(255,255,255,0.1)',
-
 };

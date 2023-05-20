@@ -6,14 +6,16 @@ import { Products } from '../Types';
 import { getProducts } from '../Actions';
 import API from '../Services';
 
-const getProductSaga = function* getProductSaga({ params }) {
+const getProductSaga = function* getProductSaga() {
     try {
-        const response = yield call(API.Home.GetProducts, params);
-        if (!response?.entries) {
-            throw new Error(response);
-        }
+        const response = yield call(API.Home.GetProducts);
+        // console.log('RESPONCE', response);
+        // if (!response) {
+        //     throw new Error(response);
+        // }
         yield put(getProducts.Success(response));
     } catch (error) {
+        console.log('ERROR IN SAGA ->', error);
         yield put(getProducts.Failed(error));
     }
 };

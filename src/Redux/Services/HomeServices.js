@@ -1,16 +1,11 @@
-import {Constant} from '../../CommonConfig';
+import { Constant } from '../../CommonConfig';
 import { Tools } from '../../Helper';
 import Ajax from './base';
 
 export default {
     GetProducts: () => {
         if (global.isConnected) {
-            return fetch(Constant.BASE_URL + 'entries', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
+            return fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
                 .then((response) => Ajax.handleResponse(response))
                 .then((data) => {
                     return data;

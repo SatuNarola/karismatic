@@ -11,6 +11,7 @@ import { getNetwork } from "./Redux/Actions";
 // --------------- HOME SCREENS ---------------
 import Home from "./screens/Home/Home";
 import Description from "./screens/Home/Description";
+import { Colors } from "./CommonConfig";
 
 
 const Stack = createNativeStackNavigator();
@@ -34,9 +35,26 @@ const Routes = () => {
 
     return (
         <NavigationContainer >
-            <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
-                <Stack.Screen name="Home" component={Home} options={{}} />
-                <Stack.Screen name="Description" component={Description} options={{}} />
+            <Stack.Navigator initialRouteName="Home">
+                <Stack.Screen
+                    name="Home"
+                    component={Home}
+                    options={{
+                        title: 'Products',
+                        headerStyle: {
+                            backgroundColor: Colors.WHITE,
+                        },
+                        headerTintColor: Colors.BLACK,
+                        headerTitleStyle: {
+                            fontWeight: 'bold',
+                        },
+                    }}
+                />
+                <Stack.Screen
+                    name="Description"
+                    component={Description}
+                    options={{}}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )
